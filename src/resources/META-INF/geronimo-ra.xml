@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connector xmlns="http://geronimo.apache.org/xml/ns/j2ee/connector" version="1.0">
+
+    <resourceadapter>
+        <outbound-resourceadapter>
+            <connection-definition>
+                <connectionfactory-interface>javax.resource.cci.ConnectionFactory</connectionfactory-interface>
+                <connectiondefinition-instance>
+                    <name>datanucleus</name>
+                    <config-property-setting name="ConnectionURL">jdbc:derby:testDB;create=true</config-property-setting>
+                    <config-property-setting name="ConnectionDriverName">org.apache.derby.jdbc.EmbeddedDriver</config-property-setting>
+                    <config-property-setting name="ConnectionUserName">sa</config-property-setting>
+                    <config-property-setting name="ConnectionPassword">password</config-property-setting>
+                    <config-property-setting name="AutoCreateSchema">true</config-property-setting>
+                    <config-property-setting name="ConnectionPoolingType">C3P0</config-property-setting>
+                    <config-property-setting name="ConnectionPoolingConfigurationFile">pool.properties</config-property-setting>
+                    <connectionmanager>
+                        <no-transaction/>
+                        <no-pool/>
+                    </connectionmanager>
+                    <global-jndi-name>jdo/datanucleus</global-jndi-name>
+                </connectiondefinition-instance>
+            </connection-definition>
+        </outbound-resourceadapter>
+    </resourceadapter>
+</connector>
+
