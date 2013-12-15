@@ -11,14 +11,24 @@
     <version>3.3.5-SNAPSHOT</version>
     <name>DataNucleus JDO JCA connector</name>
     <description>
-        DataNucleus and JDO can be used with JavaEE using this JCA plugin.
+        JCA Adapter for using DataNucleus JDO in a JavaEE environment.
     </description>
     <packaging>rar</packaging>
     <url>http://www.datanucleus.org</url>
 
     <properties>
+        <jdo.version>3.1-rc1</jdo.version>
+        <dn.core.version>3.2.10</dn.core.version>
+        <dn.api.jdo.version>3.2.6</dn.api.jdo.version>
+        <dn.rdbms.version>3.2.9</dn.rdbms.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <scm>
+        <connection>scm:git:git@github.com:datanucleus/datanucleus-jdo-jca.git</connection>
+        <developerConnection>scm:git:git@github.com:datanucleus/datanucleus-jdo-jca.git</developerConnection>
+        <url>https://github.com/datanucleus/datanucleus-jdo-jca</url>
+    </scm>
 
     <licenses>
         <license>
@@ -26,12 +36,6 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
-
-    <scm>
-        <connection>scm:git:git://github.com/datanucleus/datanucleus-jdo-jca.excel.git</connection>
-        <url>scm:git:git://github.com/datanucleus/datanucleus-jdo-jca.git</url>
-        <developerConnection>scm:git:git://github.com/datanucleus/datanucleus-jdo-jca.git</developerConnection>
-    </scm>
 
     <developers>
         <developer>
@@ -64,22 +68,22 @@
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-core</artifactId>
-            <version>3.2.9</version>
+            <version>${dn.core.version}</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-api-jdo</artifactId>
-            <version>3.2.5</version>
+            <version>${dn.api.jdo.version}</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-rdbms</artifactId>
-            <version>3.2.8</version>
+            <version>${dn.rdbms.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.jdo</groupId>
             <artifactId>jdo-api</artifactId>
-            <version>3.1-rc1</version>
+            <version>${jdo.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.resource</groupId>
