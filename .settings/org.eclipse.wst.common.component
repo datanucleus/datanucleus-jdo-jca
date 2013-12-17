@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="datanucleus-jdo-jca">
+        <wb-resource deploy-path="/" source-path="/src/resources" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/" source-path="/src/java"/>
+        <wb-resource deploy-path="/" source-path="/META-INF"/>
+        <wb-resource deploy-path="/" source-path="/src/test/java"/>
+        <wb-resource deploy-path="/" source-path="/src/rar"/>
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/datanucleus-core/3.2.10/datanucleus-core-3.2.10.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/datanucleus-api-jdo/3.2.6/datanucleus-api-jdo-3.2.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/datanucleus-rdbms/3.2.9/datanucleus-rdbms-3.2.9.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/javax/jdo/jdo-api/3.1-rc1/jdo-api-3.1-rc1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/javax/transaction/transaction-api/1.1/transaction-api-1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/datanucleus-jdo-jca/target/classes"/>
+    </wb-module>
+</project-modules>
