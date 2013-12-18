@@ -8,7 +8,7 @@
         <version>3.3</version>
     </parent>
 
-    <artifactId>datanucleus-jca</artifactId>
+    <artifactId>datanucleus-jdo-jca</artifactId>
     <version>3.3.5-SNAPSHOT</version>
 
     <name>DataNucleus JDO JCA connector</name>
@@ -35,7 +35,7 @@
                 <artifactId>maven-bundle-plugin</artifactId>
                 <configuration>
                     <instructions>
-                        <Bundle-SymbolicName>org.datanucleus.jdo.connector;singleton:=true</Bundle-SymbolicName>
+                        <Bundle-SymbolicName>org.datanucleus.jdo.jca;singleton:=true</Bundle-SymbolicName>
                         <Import-Package>
                             javax.jdo*;version="${jdo.version}",
                             *;resolution:=optional
