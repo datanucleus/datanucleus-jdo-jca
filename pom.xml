@@ -166,8 +166,8 @@
                 <version>2.2</version>
                 <configuration>
                     <includeJar>true</includeJar>
-                    <rarSourceDirectory>src/resources</rarSourceDirectory>
-                    <raXmlFile>src/resources/META-INF/ra.xml</raXmlFile>
+                    <rarSourceDirectory>src/rar</rarSourceDirectory>
+                    <raXmlFile>src/rar/META-INF/ra.xml</raXmlFile>
                 </configuration>
                 <executions>
                     <execution>

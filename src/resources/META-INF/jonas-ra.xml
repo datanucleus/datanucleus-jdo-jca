@@ -1,7 +1,0 @@
-<!DOCTYPE jonas-resource PUBLIC "-//ObjectWeb//DTD JOnAS Connector 3.0//EN"
- "http://www.objectweb.org/jonas/dtds/jonas-connector_3_0.dtd">
-<jonas-resource>
-
-    <jndiname>jdo/datanucleus</jndiname>
-
-</jonas-resource>
