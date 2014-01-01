@@ -7,8 +7,9 @@
         <version>3.3</version>
     </parent>
 
+    <packaging>rar</packaging>
     <artifactId>datanucleus-jdo-jca</artifactId>
-    <version>3.3.7-SNAPSHOT</version>
+    <version>3.3.6-SNAPSHOT</version>
 
     <name>DataNucleus JDO JCA connector</name>
     <description>
