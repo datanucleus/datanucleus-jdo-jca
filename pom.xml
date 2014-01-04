@@ -35,9 +35,7 @@
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
-                    <archive>
-                        <manifestFile>META-INF/MANIFEST.MF</manifestFile>
-                    </archive>
+                    <archive combine.self="override" />
                 </configuration>
                 <executions>
                     <execution>
