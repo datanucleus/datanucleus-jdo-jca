@@ -16,6 +16,6 @@ __Javadocs__ : [3.2](http://www.datanucleus.org/javadocs/jdo.jca/3.2/), [3.1](ht
 
 __Download(Releases)__ : [Maven Central](http://central.maven.org/maven2/org/datanucleus/datanucleus-jdo-jca)
 
-__Download(Nightly)__ : [Nightly Builds](http://central.maven.org/maven2/org/datanucleus/datanucleus-jdo-jca)
+__Download(Nightly)__ : [Nightly Builds](http://www.datanucleus.org/downloads/maven2-nightly/org/datanucleus/datanucleus-jdo-jca)
 
 __Dependencies__ : See file [pom.xml](pom.xml)
