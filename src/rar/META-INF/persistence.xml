@@ -7,7 +7,7 @@
     <properties>
 	    <property name="datanucleus.connection.resourceType" value="JTA"/>
 	    <property name="datanucleus.storeManagerType" value="rdbms"/>
-	    <property name="datanucleus.autoCreateSchema" value="true"/>	    	    
+	    <property name="datanucleus.schema.autoCreateAll" value="true"/>	    	    
 	    <property name="javax.jdo.option.ConnectionFactoryName" value="jdbc_1"/>
 	    <property name="javax.jdo.option.ConnectionDriverName" value="oracle.jdbc.driver.OracleDriver"/>
 	    <property name="javax.jdo.option.ConnectionURL" value="jdbc:oracle:thin:@localhost:1521:XE"/>
