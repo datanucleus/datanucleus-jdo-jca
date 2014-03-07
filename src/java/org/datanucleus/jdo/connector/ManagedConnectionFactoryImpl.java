@@ -98,11 +98,10 @@ public class ManagedConnectionFactoryImpl implements ManagedConnectionFactory
     public synchronized void setPrimaryClassLoader(String name)
     {
         ClassLoader thisClazzLoader = this.getClass().getClassLoader();
-
-        ClassLoader primaryClassLoader = null;
         try
         {
-            primaryClassLoader = thisClazzLoader.loadClass(name).getClassLoader();
+            ClassLoader primaryClassLoader = thisClazzLoader.loadClass(name).getClassLoader();
+            properties.put(PropertyNames.PROPERTY_CLASSLOADER_PRIMARY, primaryClassLoader);
         }
         catch (Exception e)
         {
@@ -112,7 +111,6 @@ public class ManagedConnectionFactoryImpl implements ManagedConnectionFactory
                 PersistenceManagerImpl.LOGGER.info("Exception while creating PrimaryClassLoader: ", e);
             }
         }
-        properties.put(PropertyNames.PROPERTY_CLASSLOADER_PRIMARY, primaryClassLoader);
     }
 
     // --------------- Implementation of ManagedConnectionFactory --------------

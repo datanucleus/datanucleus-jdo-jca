@@ -446,7 +446,7 @@ public class PersistenceManagerFactoryImpl implements ConnectionFactory, Persist
      */
     public boolean getDetachAllOnCommit()
     {
-        return getDetachAllOnCommit();
+        return mcf.getPersistenceManagerFactory().getDetachAllOnCommit();
     }
     
     /**
