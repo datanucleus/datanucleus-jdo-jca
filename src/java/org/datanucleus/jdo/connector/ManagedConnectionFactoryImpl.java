@@ -192,10 +192,10 @@ public class ManagedConnectionFactoryImpl implements ManagedConnectionFactory
      * to return the same ManagedConnection instance if the user asks multiple times for a PersistenceManager (PMF.getPersistenceManager()) 
      * inside a single transaction. For JBoss 4.x the setting is track-connection-by-tx.
      * 
-     * @param mcs <description>
-     * @param subject <description>
-     * @param cri <description>
-     * @return <description>
+     * @param mcs managed connections
+     * @param subject The subject
+     * @param cri request info
+     * @return The managed connection that matches
      * @exception javax.resource.ResourceException Thrown if an error occurs
      * 
      */

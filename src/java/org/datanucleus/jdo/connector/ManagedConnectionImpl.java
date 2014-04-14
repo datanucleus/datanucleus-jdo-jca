@@ -78,7 +78,7 @@ public class ManagedConnectionImpl implements ManagedConnection
      * Constructor.
      * @param mcf the ManagedConnectionFactory
      * @param credential the PasswordCredential
-     * @throws ResourceException
+     * @throws ResourceException if error occurs
      */
     public ManagedConnectionImpl(ManagedConnectionFactoryImpl mcf, PasswordCredential credential)
     throws ResourceException
@@ -120,7 +120,7 @@ public class ManagedConnectionImpl implements ManagedConnection
 
     /**
      * Destroy method
-     * @exception javax.resource.ResourceException <description>
+     * @exception javax.resource.ResourceException if error occurs
      */
     public void destroy()
     throws ResourceException
@@ -151,7 +151,7 @@ public class ManagedConnectionImpl implements ManagedConnection
 
     /**
      * Cleanup method
-     * @exception javax.resource.ResourceException <description>
+     * @exception javax.resource.ResourceException if error occurs
      */
     public synchronized void cleanup()
     throws ResourceException
@@ -201,10 +201,10 @@ public class ManagedConnectionImpl implements ManagedConnection
     
     /**
      * Accessor for the connection
-     * @param subject <description>
-     * @param cri <description>
-     * @return <description>
-     * @exception javax.resource.ResourceException <description>
+     * @param subject The subject
+     * @param cri request info
+     * @return The connection
+     * @exception javax.resource.ResourceException if error occurs
      */
     public Object getConnection(Subject subject, ConnectionRequestInfo cri)
     throws ResourceException
@@ -224,7 +224,7 @@ public class ManagedConnectionImpl implements ManagedConnection
     /**
      * Accessor for the Log
      * @return The Log writer
-     * @exception javax.resource.ResourceException <description>
+     * @exception javax.resource.ResourceException if error occurs
      */
     public PrintWriter getLogWriter()
     throws ResourceException
@@ -235,7 +235,7 @@ public class ManagedConnectionImpl implements ManagedConnection
     /**
      * Mutator for the Log
      * @param writer PrintWriter to use for Log
-     * @exception javax.resource.ResourceException <description>
+     * @exception javax.resource.ResourceException if error occurs
      */
     public void setLogWriter(PrintWriter writer)
     throws ResourceException
@@ -245,7 +245,7 @@ public class ManagedConnectionImpl implements ManagedConnection
 
     /**
      * Mutator to add a connection listener
-     * @param cel <description>
+     * @param cel event listener
      */
     public void addConnectionEventListener(ConnectionEventListener cel)
     {
@@ -257,7 +257,7 @@ public class ManagedConnectionImpl implements ManagedConnection
 
     /**
      * Mutator to remove a connection listener
-     * @param cel <description>
+     * @param cel event listener
      */
     public void removeConnectionEventListener(ConnectionEventListener cel)
     {
@@ -269,8 +269,8 @@ public class ManagedConnectionImpl implements ManagedConnection
 
     /**
      * Mutator to associate a connection
-     * @param c <description>
-     * @exception javax.resource.ResourceException <description>
+     * @param c connection
+     * @exception javax.resource.ResourceException if error occurs
      */
     public void associateConnection(Object c)
     throws ResourceException
@@ -289,8 +289,8 @@ public class ManagedConnectionImpl implements ManagedConnection
 
     /**
      * Accessor for the local transaction
-     * @return <description>
-     * @exception javax.resource.ResourceException <description>
+     * @return local txn
+     * @exception javax.resource.ResourceException if error occurs
      */
     public LocalTransaction getLocalTransaction()
     throws ResourceException
@@ -305,8 +305,8 @@ public class ManagedConnectionImpl implements ManagedConnection
 
     /**
      * Accessor for the connection MetaData
-     * @return <description>
-     * @exception javax.resource.ResourceException <description>
+     * @return metadata for the connection
+     * @exception javax.resource.ResourceException if error occurs
      */
     public ManagedConnectionMetaData getMetaData()
     throws ResourceException
@@ -318,8 +318,8 @@ public class ManagedConnectionImpl implements ManagedConnection
      * Accessor for the XA resource. The application server enlists
      * this XAResource into a XA transaction
      * This is invoked only once per instance.
-     * @return <description>
-     * @exception javax.resource.ResourceException <description>
+     * @return XA resource
+     * @exception javax.resource.ResourceException if error occurs
      */
     public XAResource getXAResource()
     throws ResourceException

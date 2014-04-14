@@ -110,42 +110,22 @@ public class PersistenceManagerImpl implements Connection, PersistenceManager
 
     // implementation of javax.resource.cci.Connection interface
 
-    /**
-     * Accessor for the local transaction.
-     * @return The local transaction
-     * @exception javax.resource.ResourceException Thrown when an error occurs
-     */
     public LocalTransaction getLocalTransaction()
     throws ResourceException
     {
         return tx;
     }
 
-    /**
-     * Accessor for Meta-Data.
-     * @return The Connection Meta-Data.
-     * @exception javax.resource.ResourceException <description>
-     **/
     public ConnectionMetaData getMetaData() throws ResourceException
     {
         throw new ResourceException("Not Yet Implemented");
     }
 
-    /**
-     *
-     * @return <description>
-     * @exception javax.resource.ResourceException <description>
-     **/
     public Interaction createInteraction() throws ResourceException
     {
         throw new ResourceException("Not Yet Implemented");
     }
 
-    /**
-     *
-     * @return <description>
-     * @exception javax.resource.ResourceException <description>
-     **/
     public ResultSetInfo getResultSetInfo() throws ResourceException
     {
         throw new ResourceException("Not Yet Implemented");
@@ -154,8 +134,7 @@ public class PersistenceManagerImpl implements Connection, PersistenceManager
     // implementation of javax.jdo.PersistenceManager interface
 
     /**
-     * Method to assert if this Persistence Manager is open. Throws a
-     * JDOFatalUserException if it has been closed.
+     * Method to assert if this Persistence Manager is open. Throws a JDOFatalUserException if it has been closed.
      */
     private void assertIsOpen()
     {
@@ -649,23 +628,12 @@ public class PersistenceManagerImpl implements Connection, PersistenceManager
         return pm.getObjectId(pc);
     }
 
-    /**
-     *
-     * @param pc <description>
-     * @return <description>
-     */
     public Object getTransactionalObjectId(Object pc)
     {
         checkStatus();
         return pm.getTransactionalObjectId(pc);
     }
 
-    /**
-     *
-     * @param clazz <description>
-     * @param str <description>
-     * @return <description>
-     */
     public Object newObjectIdInstance(Class clazz, String str)
     {
         checkStatus();

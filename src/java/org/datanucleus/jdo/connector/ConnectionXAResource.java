@@ -69,6 +69,7 @@ public class ConnectionXAResource implements XAResource
 
     /**
      * Method to commit the Transaction
+     * @param pm PersistenceManager
      */
     public void internalCommit(JDOPersistenceManager pm)
     {
@@ -168,6 +169,7 @@ public class ConnectionXAResource implements XAResource
     
     /**
      * Method to rollback the Transaction
+     * @param pm PersistenceManager
      */
     public void internalRollback(JDOPersistenceManager pm)
     {
@@ -210,6 +212,7 @@ public class ConnectionXAResource implements XAResource
     
     /**
      * Method to start the Transaction
+     * @param pm PersistenceManager
      */
     public void internalStart(JDOPersistenceManager pm)
     {

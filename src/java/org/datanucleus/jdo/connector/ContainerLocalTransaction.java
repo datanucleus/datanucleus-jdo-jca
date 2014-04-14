@@ -38,7 +38,7 @@ public class ContainerLocalTransaction implements LocalTransaction
     
     /**
      * Method to start the Transaction
-     * @exception javax.resource.ResourceException <description>
+     * @exception javax.resource.ResourceException if error occurs
      */
     public void begin()
     throws ResourceException
@@ -56,7 +56,7 @@ public class ContainerLocalTransaction implements LocalTransaction
 
     /**
      * Method to commit the Transaction
-     * @exception javax.resource.ResourceException <description>
+     * @exception javax.resource.ResourceException if error occurs
      */
     public void commit()
     throws ResourceException
@@ -81,7 +81,7 @@ public class ContainerLocalTransaction implements LocalTransaction
 
     /**
      * Method to rollback the Transaction
-     * @exception javax.resource.ResourceException <description>
+     * @exception javax.resource.ResourceException if error occurs
      */
     public void rollback()
     throws ResourceException

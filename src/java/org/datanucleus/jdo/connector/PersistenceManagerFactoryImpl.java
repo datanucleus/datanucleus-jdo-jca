@@ -62,10 +62,6 @@ public class PersistenceManagerFactoryImpl implements ConnectionFactory, Persist
 
     // implementation of javax.resource.Referenceable interface
 
-    /**
-     *
-     * @param ref <description>
-     */
     public void setReference(Reference ref)
     {
         this.ref = ref;
@@ -73,11 +69,6 @@ public class PersistenceManagerFactoryImpl implements ConnectionFactory, Persist
 
     // implementation of javax.naming.Referenceable interface
 
-    /**
-     *
-     * @return <description>
-     * @exception javax.naming.NamingException <description>
-     */
     public Reference getReference() throws NamingException
     {
         return ref;
@@ -85,43 +76,21 @@ public class PersistenceManagerFactoryImpl implements ConnectionFactory, Persist
 
     // implementation of javax.resource.cci.ConnectionFactory interface
 
-    /**
-     * This is invoked when the user asks for an instance of the PersistenceManager;
-     * If this method is invoked multiple times in a single transaction, it's invoked on the same instance of this PMF;
-     * @return <description>
-     * @exception javax.resource.ResourceException <description>
-     */
     public Connection getConnection() throws ResourceException
     {
         return (Connection)cm.allocateConnection(mcf, null);
     }
 
-    /**
-     *
-     * @param cs <description>
-     * @return <description>
-     * @exception javax.resource.ResourceException <description>
-     */
     public Connection getConnection(ConnectionSpec cs) throws ResourceException
     {
         return getConnection();
     }
 
-    /**
-     *
-     * @return <description>
-     * @exception javax.resource.ResourceException <description>
-     */
     public ResourceAdapterMetaData getMetaData() throws ResourceException
     {
         throw new ResourceException("Not Yet Implemented");
     }
 
-    /**
-     *
-     * @return <description>
-     * @exception javax.resource.ResourceException <description>
-     */
     public RecordFactory getRecordFactory() throws ResourceException
     {
         return null;
@@ -129,19 +98,11 @@ public class PersistenceManagerFactoryImpl implements ConnectionFactory, Persist
 
     // implementation of javax.jdo.PersistenceManagerFactory interface
 
-    /**
-     *
-     * @return <description>
-     */
     public Properties getProperties()
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     *
-     * @return <description>
-     */
     public PersistenceManager getPersistenceManager()
     {
         try 
@@ -165,322 +126,176 @@ public class PersistenceManagerFactoryImpl implements ConnectionFactory, Persist
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     * Mutator for the Username 
-     *
-     * @param username Username
-     */
     public void setConnectionUserName(String username)
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     * Accessor for the username 
-     *
-     * @return Username
-     */
     public String getConnectionUserName()
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     * Mutator for the Password 
-     *
-     * @param password Password
-     */
     public void setConnectionPassword(String password)
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     * Mutator for the connection URL 
-     *
-     * @param url Connection URL for the datasource
-     */
     public void setConnectionURL(String url)
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     * Accessor for the connection URL 
-     *
-     * @return The connection URL
-     */
     public String getConnectionURL()
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     *
-     * @param drivername Driver name
-     */
     public void setConnectionDriverName(String drivername)
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     *
-     * @return The connection driver name
-     */
     public String getConnectionDriverName()
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     *
-     * @param conn_factory_name <description>
-     */
     public void setConnectionFactoryName(String conn_factory_name)
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     *
-     * @return Connection Factory name
-     */
     public String getConnectionFactoryName()
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     *
-     * @param conn_factory Connection factory
-     */
     public void setConnectionFactory(Object conn_factory)
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     *
-     * @return The connection factory
-     */
     public Object getConnectionFactory()
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     *
-     * @param conn_factory_name Connection factory name
-     */
     public void setConnectionFactory2Name(String conn_factory_name)
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     *
-     * @return Connection factory name
-     */
     public String getConnectionFactory2Name()
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     *
-     * @param conn_factory Connection Factory
-     */
     public void setConnectionFactory2(Object conn_factory)
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     *
-     * @return <description>
-     */
     public Object getConnectionFactory2()
     {
         throw new JDOException("Not available in managed environment");
     }
 
-    /**
-     *
-     * @param multithreaded Whether is multithreaded or not
-     */
     public void setMultithreaded(boolean multithreaded)
     {
         mcf.getPersistenceManagerFactory().setMultithreaded(multithreaded);
     }
 
-    /**
-     *
-     * @return <description>
-     */
     public boolean getMultithreaded()
     {
         return mcf.getPersistenceManagerFactory().getMultithreaded();
     }
 
-    /**
-     *
-     * @param optimistic <description>
-     */
     public void setOptimistic(boolean optimistic)
     {
     	mcf.getPersistenceManagerFactory().setOptimistic(optimistic);
     }
 
-    /**
-     *
-     * @return <description>
-     */
     public boolean getOptimistic()
     {
         return mcf.getPersistenceManagerFactory().getOptimistic();
     }
 
-    /**
-     *
-     * @param retain_values <description>
-     */
     public void setRetainValues(boolean retain_values)
     {
     	mcf.getPersistenceManagerFactory().setRetainValues(retain_values);
     }
 
-    /**
-     *
-     * @return <description>
-     */
     public boolean getRetainValues()
     {
         return mcf.getPersistenceManagerFactory().getRetainValues();
     }
 
-    /**
-     *
-     * @param restore_values <description>
-     */
     public void setRestoreValues(boolean restore_values)
     {
     	mcf.getPersistenceManagerFactory().setRestoreValues(restore_values);
     }
 
-    /**
-     *
-     * @return <description>
-     */
     public boolean getRestoreValues()
     {
         return mcf.getPersistenceManagerFactory().getRestoreValues();
     }
 
-    /**
-     *
-     * @param nontrans_read <description>
-     */
     public void setNontransactionalRead(boolean nontrans_read)
     {
     	mcf.getPersistenceManagerFactory().setNontransactionalRead(nontrans_read);
     }
 
-    /**
-     *
-     * @return <description>
-     */
     public boolean getNontransactionalRead()
     {
         return mcf.getPersistenceManagerFactory().getNontransactionalRead();
     }
 
-    /**
-     *
-     * @param nontrans_write <description>
-     */
     public void setNontransactionalWrite(boolean nontrans_write)
     {
     	mcf.getPersistenceManagerFactory().setNontransactionalWrite(nontrans_write);
     }
 
-    /**
-     *
-     * @return <description>
-     */
     public boolean getNontransactionalWrite()
     {
         return mcf.getPersistenceManagerFactory().getNontransactionalWrite();
     }
 
-    /**
-     *
-     * @param ignore <description>
-     */
     public void setIgnoreCache(boolean ignore)
     {
     	mcf.getPersistenceManagerFactory().setIgnoreCache(ignore);
     }
 
-    /**
-     *
-     * @return <description>
-     */
     public boolean getIgnoreCache()
     {
         return mcf.getPersistenceManagerFactory().getIgnoreCache();
     }
 
-    /**
-     * Mutator for whether to detach all objects on commit of the txn.
-     * @param detach Whether to detach objects on commit of the txn.
-     */
     public void setDetachAllOnCommit(boolean detach)
     {
     	mcf.getPersistenceManagerFactory().setDetachAllOnCommit(detach);
     }
 
-    /**
-     * Accessor for whether to detach objects on commit of the txn.
-     * @return Whether to detach objects on commit of the txn.
-     */
     public boolean getDetachAllOnCommit()
     {
         return mcf.getPersistenceManagerFactory().getDetachAllOnCommit();
     }
-    
-    /**
-     * Mutator for the Mapping name
-     * @param mapping mapping name
-     */
+
     public void setMapping(String mapping)
     {
     	mcf.getPersistenceManagerFactory().setMapping(mapping);
     }
-    
-    /**
-     * Accessor for the mapping name
-     * @return mapping name
-     */
+
     public String getMapping()
     {
         return mcf.getPersistenceManagerFactory().getMapping();
     }
-   
-    /**
-     * Accessor for the supported options 
-     *
-     * @return Collection of supported options
-     */
+
     public Collection<String> supportedOptions()
     {
         return mcf.getPersistenceManagerFactory().supportedOptions();
     }
-    
-    /**
-     * Accessor for the Datastore Cache
-     * @return The datastore cache
-     */
+
     public DataStoreCache getDataStoreCache()
     {
         return mcf.getPersistenceManagerFactory().getDataStoreCache();
@@ -530,91 +345,51 @@ public class PersistenceManagerFactoryImpl implements ConnectionFactory, Persist
         return null;
     }
 
-    /**
-     * Accessor for the persistence-unit name.
-     * @return Name of the "persistence-unit"
-     */
     public String getPersistenceUnitName()
     {
         return mcf.getPersistenceManagerFactory().getPersistenceUnitName();
     }
 
-    /**
-     * Accessor for the server timezone id.
-     * @return Server timezone id
-     */
     public String getServerTimeZoneID()
     {
         return mcf.getPersistenceManagerFactory().getServerTimeZoneID();
     }
 
-    /**
-     * Accessor for the transaction type.
-     * @return Transaction type
-     */
     public String getTransactionType()
     {
         return mcf.getPersistenceManagerFactory().getTransactionType();
     }
 
-    /**
-     * Mutator for the persistence-unit name
-     * @param name Name of the "persistence-unit"
-     */
     public void setPersistenceUnitName(String name)
     {
         mcf.setPersistenceUnitName(name);
     }
 
-    /**
-     * Mutator for the server timezone id.
-     * @param id Server timezone id
-     */
     public void setServerTimeZoneID(String id)
     {
     	mcf.getPersistenceManagerFactory().setServerTimeZoneID(id);
     }
 
-    /**
-     * Mutator for the transaction type.
-     * @param type Transaction type
-     */
     public void setTransactionType(String type)
     {
     	mcf.getPersistenceManagerFactory().setTransactionType(type);
     }
 
-    /**
-     *
-     * @param readOnly <description>
-     */
     public void setReadOnly(boolean readOnly)
     {
         mcf.getPersistenceManagerFactory().setReadOnly(readOnly);
     }
 
-    /**
-     *
-     * @return <description>
-     */
     public boolean getReadOnly()
     {
         return mcf.getPersistenceManagerFactory().getReadOnly();
     }
 
-    /**
-     * Accessor for the name of the PMF.
-     * @return Name of the PMF
-     */
     public String getName()
     {
         return mcf.getPersistenceManagerFactory().getName();
     }
 
-    /**
-     * Mutator for the name of the PMF.
-     * @param name Name of the PMF
-     */
     public void setName(String name)
     {
     	mcf.getPersistenceManagerFactory().setName(name);
