@@ -642,13 +642,13 @@ public class PersistenceManagerImpl implements Connection, PersistenceManager
 
     /**
      * Method to create an instance of an interface or abstract class
-     * @param persistenceCapable interface/abstract class declared in metadata
+     * @param pc interface/abstract class declared in metadata
      * @return Instance of the interface / abstract class
      */
-    public Object newInstance(Class persistenceCapable)
+    public Object newInstance(Class pc)
     {
         checkStatus();
-        return pm.newInstance(persistenceCapable);
+        return pm.newInstance(pc);
     }
 
     /**
@@ -807,8 +807,8 @@ public class PersistenceManagerImpl implements Connection, PersistenceManager
     }
 
     /**
-     * Make a collection of PersistenceCapable objects transactional
-     * @param pcs Collection of Persistence-Capable objects
+     * Make a collection of persistable objects transactional
+     * @param pcs Collection of persistable objects
      */
     public void makeTransactionalAll(Collection pcs)
     {
