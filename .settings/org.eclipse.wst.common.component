@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
     <wb-module deploy-name="datanucleus-jdo-jca">
-        <wb-resource deploy-path="/" source-path="/src/resources" tag="defaultRootSource"/>
-        <wb-resource deploy-path="/" source-path="/META-INF"/>
-        <wb-resource deploy-path="/" source-path="/src/test/java"/>
+        <wb-resource deploy-path="/" source-path="/src/resources"/>
         <wb-resource deploy-path="/" source-path="/src/rar"/>
-        <wb-resource deploy-path="/" source-path="/src/java"/>
-        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/datanucleus-core/3.2.11/datanucleus-core-3.2.11.jar">
+        <wb-resource deploy-path="/" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/rar" tag="defaultRootSource"/>
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/datanucleus-core/4.0.0-m3/datanucleus-core-4.0.0-m3.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/datanucleus-api-jdo/3.2.7/datanucleus-api-jdo-3.2.7.jar">
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/datanucleus-api-jdo/4.0.0-m3/datanucleus-api-jdo-4.0.0-m3.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/datanucleus-rdbms/3.2.10/datanucleus-rdbms-3.2.10.jar">
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/datanucleus-rdbms/4.0.0-m3/datanucleus-rdbms-4.0.0-m3.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/javax/jdo/jdo-api/3.1-rc1/jdo-api-3.1-rc1.jar">
