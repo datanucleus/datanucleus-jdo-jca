@@ -57,10 +57,6 @@ import org.datanucleus.util.NucleusLogger;
  */
 public class PersistenceManagerImpl implements Connection, PersistenceManager
 {
-    /** Localisation utility for output messages */
-    protected static final Localiser LOCALISER = Localiser.getInstance("org.datanucleus.Localisation",
-        org.datanucleus.ClassConstants.NUCLEUS_CONTEXT_LOADER);
-
     /** Logger for JCA. */
     public static final NucleusLogger LOGGER = NucleusLogger.getLoggerInstance("DataNucleus.JCA");
 
@@ -140,7 +136,7 @@ public class PersistenceManagerImpl implements Connection, PersistenceManager
     {
         if (isClosed())
         {
-            throw new JDOFatalUserException(LOCALISER.msg("011000"));
+            throw new JDOFatalUserException(Localiser.msg("011000"));
         }
     }
     
