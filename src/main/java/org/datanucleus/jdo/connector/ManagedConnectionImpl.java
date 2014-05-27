@@ -159,7 +159,7 @@ public class ManagedConnectionImpl implements ManagedConnection
         PersistenceManagerImpl.LOGGER.debug("Cleaning up ManagedConnection "+this);
         if (pm != null)
         {
-        	pm.getExecutionContext().disconnectLifecycleListener();
+        	pm.getExecutionContext().closeCallbackHandler();
         }
 
         for (Iterator<PersistenceManagerImpl> i = handles.iterator(); i.hasNext();)
