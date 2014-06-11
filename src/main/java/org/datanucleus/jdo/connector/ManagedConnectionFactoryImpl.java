@@ -43,6 +43,7 @@ import org.datanucleus.metadata.TransactionType;
  */
 public class ManagedConnectionFactoryImpl implements ManagedConnectionFactory
 {
+    private static final long serialVersionUID = 318962833424682326L;
     JDOPersistenceManagerFactory pmf;
     Properties properties = new Properties();
     boolean configurable = true;

@@ -44,6 +44,7 @@ import javax.resource.spi.ConnectionManager;
  */
 public class PersistenceManagerFactoryImpl implements ConnectionFactory, PersistenceManagerFactory
 {
+    private static final long serialVersionUID = 212793958782659905L;
     private final ManagedConnectionFactoryImpl mcf;
     private final ConnectionManager cm;
 
