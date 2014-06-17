@@ -55,7 +55,7 @@ public class ConnectionXAResource implements XAResource
 
         try 
         {
-            internalCommit((JDOPersistenceManager)table.remove(xid));
+            internalCommit(table.remove(xid));
         }
         catch (JDOException e)
         {
@@ -92,7 +92,7 @@ public class ConnectionXAResource implements XAResource
         
         if (flags == XAResource.TMSUCCESS || flags == XAResource.TMSUSPEND)
         {
-            JDOPersistenceManager pm = (JDOPersistenceManager)table.get(xid);
+            JDOPersistenceManager pm = table.get(xid);
             try
             {
                 pm.flush();
@@ -155,7 +155,7 @@ public class ConnectionXAResource implements XAResource
         
         try
         {
-            internalRollback((JDOPersistenceManager)table.remove(xid));
+            internalRollback(table.remove(xid));
         }
         catch (NucleusException e)
         {
