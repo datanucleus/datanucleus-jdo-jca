@@ -25,8 +25,8 @@
     <properties>
         <jdo.version>3.1-rc1</jdo.version>
         <dn.core.version>4.0.4</dn.core.version>
-        <dn.api.jdo.version>4.0.4</dn.api.jdo.version>
-        <dn.rdbms.version>4.0.5</dn.rdbms.version>
+        <dn.api.jdo.version>4.0.5</dn.api.jdo.version>
+        <dn.rdbms.version>4.0.7</dn.rdbms.version>
     </properties>
 
     <build>
