@@ -23,10 +23,10 @@
     </scm>
 
     <properties>
-        <jdo.version>3.1-rc1</jdo.version>
-        <dn.core.version>4.1.0-m2</dn.core.version>
-        <dn.api.jdo.version>4.1.0-m2</dn.api.jdo.version>
-        <dn.rdbms.version>4.1.0-m2</dn.rdbms.version>
+        <jdo.version>3.1</jdo.version>
+        <dn.core.version>4.1.0-m3</dn.core.version>
+        <dn.api.jdo.version>4.1.0-m3</dn.api.jdo.version>
+        <dn.rdbms.version>4.1.0-m3</dn.rdbms.version>
     </properties>
 
     <build>
