@@ -33,6 +33,7 @@ import javax.jdo.FetchGroup;
 import javax.jdo.FetchPlan;
 import javax.jdo.JDOException;
 import javax.jdo.JDOFatalUserException;
+import javax.jdo.JDOQLTypedQuery;
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
@@ -501,6 +502,16 @@ public class PersistenceManagerImpl implements Connection, PersistenceManager
     {
         checkStatus();
         return pm.newQuery(cln, filter);
+    }
+
+    /* (non-Javadoc)
+     * @see javax.jdo.PersistenceManager#newJDOQLTypedQuery(java.lang.Class)
+     */
+    @Override
+    public <T> JDOQLTypedQuery<T> newJDOQLTypedQuery(Class<T> cls)
+    {
+        checkStatus();
+        return pm.newJDOQLTypedQuery(cls);
     }
 
     /**
