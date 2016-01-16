@@ -4,11 +4,11 @@
     <parent>
         <groupId>org.datanucleus</groupId>
         <artifactId>datanucleus-maven-parent</artifactId>
-        <version>4.0.5</version>
+        <version>5.0.0</version>
     </parent>
 
     <artifactId>datanucleus-jdo-jca</artifactId>
-    <version>4.2.4-SNAPSHOT</version>
+    <version>5.0.0-m1-SNAPSHOT</version>
     <packaging>rar</packaging>
 
     <name>DataNucleus JDO JCA connector</name>
@@ -24,9 +24,9 @@
 
     <properties>
         <jdo.version>3.2.0-m3</jdo.version>
-        <dn.core.version>4.1.8</dn.core.version>
-        <dn.api.jdo.version>4.2.1</dn.api.jdo.version>
-        <dn.rdbms.version>4.1.10</dn.rdbms.version>
+        <dn.core.version>5.0.0-m1-SNAPSHOT</dn.core.version>
+        <dn.api.jdo.version>5.0.0-m1-SNAPSHOT</dn.api.jdo.version>
+        <dn.rdbms.version>5.0.0-m1-SNAPSHOT</dn.rdbms.version>
     </properties>
 
     <build>
