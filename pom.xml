@@ -8,7 +8,7 @@
     </parent>
 
     <artifactId>datanucleus-jdo-jca</artifactId>
-    <version>5.0.10</version>
+    <version>5.0.11-SNAPSHOT</version>
     <packaging>rar</packaging>
 
     <name>DataNucleus JDO JCA connector</name>
