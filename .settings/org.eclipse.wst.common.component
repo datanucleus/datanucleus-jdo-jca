@@ -5,16 +5,16 @@
         <wb-resource deploy-path="/" source-path="/src/main/java"/>
         <wb-resource deploy-path="/" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/rar" tag="defaultRootSource"/>
-        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/datanucleus-core/4.0.0-m3/datanucleus-core-4.0.0-m3.jar">
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/datanucleus-core/5.0.10/datanucleus-core-5.0.10.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/datanucleus-api-jdo/4.0.0-m3/datanucleus-api-jdo-4.0.0-m3.jar">
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/datanucleus-api-jdo/5.0.9/datanucleus-api-jdo-5.0.9.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/datanucleus-rdbms/4.0.0-m3/datanucleus-rdbms-4.0.0-m3.jar">
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/datanucleus-rdbms/5.0.10/datanucleus-rdbms-5.0.10.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/javax/jdo/jdo-api/3.1-rc1/jdo-api-3.1-rc1.jar">
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/datanucleus/javax.jdo/3.2.0-m7/javax.jdo-3.2.0-m7.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/javax/transaction/transaction-api/1.1/transaction-api-1.1.jar">
