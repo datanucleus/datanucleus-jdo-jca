@@ -40,7 +40,7 @@ import javax.resource.cci.ResourceAdapterMetaData;
 import javax.resource.spi.ConnectionManager;
 
 /**
- * PersistenceManagerFactoryImpl for J2EE.
+ * PersistenceManagerFactoryImpl for JavaEE.
  */
 public class PersistenceManagerFactoryImpl implements ConnectionFactory, PersistenceManagerFactory
 {

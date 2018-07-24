@@ -55,8 +55,7 @@ public class ManagedConnectionImpl implements ManagedConnection
     //private final List closedHandles = new ArrayList();
 
     /**
-     * Those instances of {@link PersistenceManagerImpl}, which have been
-     * opened for this managed connection.
+     * Those instances of {@link PersistenceManagerImpl}, which have been opened for this managed connection.
      */
     private final List<PersistenceManagerImpl> handles = new ArrayList();
 
@@ -107,6 +106,7 @@ public class ManagedConnectionImpl implements ManagedConnection
             PersistenceManagerImpl.LOGGER.error("Invalid state during begin invoke. Transaction is closed.");
             return;
         }
+
         PersistenceManagerImpl.LOGGER.debug("Beginning ManagedConnection "+this);
         if (!getPersistenceManager().getExecutionContext().getTransaction().isActive())
         {
@@ -133,13 +133,14 @@ public class ManagedConnectionImpl implements ManagedConnection
             List handlesToClose = new ArrayList(handles);
             for (Iterator it = handlesToClose.iterator(); it.hasNext(); )
             {
-                PersistenceManagerImpl om = ((PersistenceManagerImpl)it.next());
-                if (!om.isClosed())
+                PersistenceManagerImpl pm = ((PersistenceManagerImpl)it.next());
+                if (!pm.isClosed())
                 {
-                    om.close();
+                    pm.close();
                 }
             }
         }
+
         if (pm != null)
         {
         	pm.close();

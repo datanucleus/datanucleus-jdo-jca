@@ -261,12 +261,11 @@ public class ManagedConnectionFactoryImpl implements ManagedConnectionFactory
     {
         if (subject == null) 
         {
-            if (!properties.containsKey(Constants.PROPERTY_CONNECTION_USER_NAME) ||
-            	!properties.containsKey(Constants.PROPERTY_CONNECTION_PASSWORD))
+            if (!properties.containsKey(Constants.PROPERTY_CONNECTION_USER_NAME) || !properties.containsKey(Constants.PROPERTY_CONNECTION_PASSWORD))
             {
                 return null;
             }
-            PasswordCredential pc=new PasswordCredential(properties.getProperty("javax.jdo.option.ConnectionUserName"), properties.getProperty("javax.jdo.option.ConnectionPassword").toCharArray());
+            PasswordCredential pc=new PasswordCredential(properties.getProperty(Constants.PROPERTY_CONNECTION_USER_NAME), properties.getProperty(Constants.PROPERTY_CONNECTION_PASSWORD).toCharArray());
             pc.setManagedConnectionFactory(this);
             return pc;
         }

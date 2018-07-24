@@ -32,8 +32,8 @@ import org.datanucleus.exceptions.NucleusException;
 import org.datanucleus.util.StringUtils;
 
 /**
- * XAResource for the Connector. It is enlisted in the XA transaction when
- * the DataNucleus Connector is allocated by the Application Server 
+ * XAResource for the Connector. 
+ * It is enlisted in the XA transaction when the DataNucleus Connector is allocated by the Application Server.
  */
 public class ConnectionXAResource implements XAResource
 {

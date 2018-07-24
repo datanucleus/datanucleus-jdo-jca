@@ -23,9 +23,8 @@ import javax.resource.ResourceException;
 import javax.resource.spi.LocalTransaction;
 
 /**
- * Container-demarcated local transaction.
- * Starts the LocalTransaction of the Resource. The JCA container uses
- * this interface to control the lifecycle of local transactions.
+ * Container-demarcated local transaction. Starts the LocalTransaction of the Resource. 
+ * The JCA container uses this interface to control the lifecycle of local transactions.
  */
 public class ContainerLocalTransaction implements LocalTransaction
 {

@@ -54,7 +54,7 @@ import org.datanucleus.util.NucleusLogger;
 
 /**
  * Implementation of the PersistenceManager for use in JCA environments.
- * An application handle associated to the {@link org.datanucleus.jdo.connector.ManagedConnectionImpl}.
+ * An application handle associated with the {@link org.datanucleus.jdo.connector.ManagedConnectionImpl}.
  */
 public class PersistenceManagerImpl implements Connection, PersistenceManager
 {
