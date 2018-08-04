@@ -8,7 +8,7 @@
     </parent>
 
     <artifactId>datanucleus-jdo-jca</artifactId>
-    <version>5.1.11-SNAPSHOT</version>
+    <version>5.2.0-m1-SNAPSHOT</version>
     <packaging>rar</packaging>
 
     <name>DataNucleus JDO JCA connector</name>
@@ -24,9 +24,9 @@
 
     <properties>
         <jdo.version>3.2.0-m8</jdo.version>
-        <dn.core.version>5.1.10</dn.core.version>
-        <dn.api.jdo.version>5.1.7</dn.api.jdo.version>
-        <dn.rdbms.version>5.1.10</dn.rdbms.version>
+        <dn.core.version>5.2.0-m1-SNAPSHOT</dn.core.version>
+        <dn.api.jdo.version>5.2.0-m1-SNAPSHOT</dn.api.jdo.version>
+        <dn.rdbms.version>5.2.0-m1-SNAPSHOT</dn.rdbms.version>
     </properties>
 
     <build>
