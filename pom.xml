@@ -24,9 +24,9 @@
 
     <properties>
         <jdo.version>3.2.0-m13</jdo.version>
-        <dn.core.version>5.2.7</dn.core.version>
-        <dn.api.jdo.version>5.2.6</dn.api.jdo.version>
-        <dn.rdbms.version>5.2.7</dn.rdbms.version>
+        <dn.core.version>5.2.8</dn.core.version>
+        <dn.api.jdo.version>5.2.7</dn.api.jdo.version>
+        <dn.rdbms.version>5.2.8</dn.rdbms.version>
     </properties>
 
     <build>
