@@ -26,7 +26,7 @@ import javax.transaction.xa.XAException;
 import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
 
-import org.datanucleus.Transaction;
+import org.datanucleus.transaction.Transaction;
 import org.datanucleus.api.jdo.JDOPersistenceManager;
 import org.datanucleus.exceptions.NucleusException;
 import org.datanucleus.util.StringUtils;
